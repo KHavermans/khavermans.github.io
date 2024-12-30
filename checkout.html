@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - KH Cheats</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/KH_icon.ico" type="image/x-icon">
+    <style>
+        /* Algemene instellingen */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #ffffff;
+        }
+
+    
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px; /* Padding verhoogd voor meer ruimte links en rechts */
+            background: #000000; /* Donkere achtergrond */
+            border-bottom: 2px solid #ffffff;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Ruimte tussen logo en titel */
+            margin-left: 50px; /* Verschuif logo en titel iets naar rechts */
+        }
+        .logo img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+        }
+        .site-title {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        /* Checkout-container instellingen */
+        .checkout-container {
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .game-info {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background-color: #222;
+            border-radius: 10px;
+            padding: 30px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .game-logo {
+            width: 450px;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 13px;
+        }
+
+        .game-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .game-details h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+            position: relative;
+            top: 23px; /* Verhoogt de naam verder omhoog */
+        }
+
+        .game-details p {
+            font-size: 1.2em;
+        }
+
+        /* Verplaats de prijs onder de toekomstige tekst */
+        .price {
+            font-size: 1.3em; /* Vergroot de prijs */
+            margin-top: 10x; /* Verklein de marge tussen prijs en hoeveelheid */
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .quantity-selector {
+            margin-top:0px; /* Verklein de marge tussen prijs en hoeveelheid */
+        }
+
+        .quantity-selector input {
+            padding: 1px;
+            font-size: 1.2em;
+            width: 40px;
+            border-radius: 5px;
+            border: 2px solid #aca9a9;
+            background-color: #333;
+            color: white;
+        }
+
+        .add-to-cart-btn {
+            margin-top: 2px; /* Verklein de marge tussen hoeveelheid en koopknop */
+            padding: 15px 30px;
+            font-size: 1.5em;
+            background-color: #00730f;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #00610d;
+        }
+
+        /* Footer instellingen */
+        footer {
+        text-align: center;
+        padding:50px 20px;
+        background-color: #000000;
+        border-top: 2px solid #ffffff;
+        margin-top: 30px;
+        font-size: 0.8em; /* Verkleint het lettertype voor de gehele footer */
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Belangrijke notitie */
+        .footer-note {
+            margin-bottom: 5px;
+        }
+
+        .footer-note p {
+            font-size: 1.2em;
+        }
+
+        /* Social media knoppen */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-icon {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+
+        .footer-copyright p {
+            font-size: 0.9em; /* Verklein de tekstgrootte voor copyright en refund policy */
+        }
+
+        /* Footer link styling */
+        .footer-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: normal;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #ffffff; /* Verandert naar wit bij hover */
+        }
+
+        /* Stijl voor de voordelenlijst */
+        .game-description ul {
+            list-style-type: none; /* Verwijdert de standaard bullets */
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .game-description li {
+            font-size: 1.1em;
+            margin-bottom: 7px;
+        }
+        /* Verwijder de standaard linkstijl voor de gehele website */
+        .no-style {
+            text-decoration: none;  /* Verwijder onderstreping */
+            color: inherit;  /* Neemt de kleur van de omliggende tekst over */
+        }
+
+        /* Voeg dit toe om ook het hover-effect te verwijderen */
+        .no-style:hover {
+            color: inherit;  /* Zorg ervoor dat de kleur bij hover niet verandert */
+            text-decoration: none;  /* Zorg ervoor dat de onderstreping bij hover ook niet komt */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <!-- Onzichtbare hyperlink rond het logo -->
+            <a href="index.html" class="no-style">
+                <div class="logo">
+                    <img src="images/KH.png" alt="KH Cheats Logo">
+                </div>
+            </a>
+    
+            <!-- Onzichtbare hyperlink rond de site titel "KH Cheats" -->
+            <a href="index.html" class="no-style">
+                <h1 class="site-title">KH Cheats</h1>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="checkout-container">
+            <div class="game-info" id="gameInfo">
+                <img id="gameLogo" src="" alt="Game Logo" class="game-logo">
+                <div class="game-details">
+                    <h2 id="gameTitle">Select a game</h2>
+                    <p id="gameDescription">Select a game to see the description</p>
+                    <div id="gamePrice">Price: €0</div>
+
+                    <!-- Nieuwe beschrijving voor alle games -->
+                    <div class="game-description">
+                        <ul>
+                            <li> - Specialized No Recoil Cheat</li>
+                            <li> - Regular Updates</li>
+                            <li> - Easy to Use</li>
+                            <li> - Works with any DPI</li>
+                            <li> - Instant delivery to E-mail</li>
+                            <li> - Undetectable & Secure</li>
+                            <li> - 24/7 Customer Service for questions and help</li>
+                        </ul>
+                    </div>
+
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity: </label>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1">
+                    </div>
+                    <button class="add-to-cart-btn" onclick="window.location.href='payment.html'">Proceed to payment</button>
+                    <script>
+                        function proceedToPayment() {
+                            const selectedGame = getQueryParam('game');
+                            if (selectedGame) {
+                                // Voeg de game toe aan de URL als queryparameter
+                                window.location.href = 'payment.html?game=' + selectedGame;
+                            } else {
+                                console.error("No game selected.");
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- Belangrijke Notitie -->
+            <div class="footer-note">
+                <p><strong>Important Note:</strong><br>
+                We recommend to use these macros only in offline gamemodes, for a fair competition between players.</p>
+            </div>
+
+            <!-- Social Media knoppen -->
+            <div class="social-media">
+                <a href="https://www.tiktok.com/@khcheats.com" target="_blank">
+                    <img src="images/tiktok-icon.png" alt="TikTok" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/khcheats" target="_blank">
+                    <img src="images/instagram-icon.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://www.youtube.com/channel/UCefEL7r0p91Y3yEW8n78YHQ" target="_blank">
+                    <img src="images/youtube-icon.png" alt="YouTube" class="social-icon">
+                </a>
+                <a href="https://www.reddit.com" target="_blank">
+                    <img src="images/reddit-icon.png" alt="Reddit" class="social-icon">
+                </a>
+            </div>
+
+            <!-- Copyright en Refund Policy -->
+            <div class="footer-copyright">
+                <p>&copy; 2024 KH Cheats. All rights reserved.</p>
+                <p><a href="refund-policy.html" class="footer-link">Refund Policy</a></p>
+                <p> </p>
+                <br>
+                <br>
+                <br>
+                <p></p>
+                <br>
+                
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Functie om de queryparameter uit de URL te halen
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Functie om de checkout bij te werken op basis van de geselecteerde game
+        function updateCheckout(game) {
+            let gameInfo = {};
+
+            console.log("Game selected:", game);  // Debugging log statement
+
+            // Maak een lijst van alternatieve benamingen voor elke game
+            switch (game) {
+                case 'rainbow6':
+                    gameInfo = {
+                        logo: "images/r6logo.jpg",
+                        title: "Rainbow Six Siege No Recoil Cheat",
+                        description: "",
+                        price: "€14.00"
+                    };
+                    break;
+                case 'valorant':
+                    gameInfo = {
+                        logo: "images/valorant.jpg",
+                        title: "Valorant No Recoil Cheat",
+                        description: "",
+                        price: "€14.00"
+                    };
+                    break;
+                case 'warzone':
+                    gameInfo = {
+                        logo: "images/warzone.jpg",
+                        title: "COD Warzone No Recoil Cheat",
+                        description: "",
+                        price: "€14.00"
+                    };
+                    break;
+
+                    case 'apex':
+                    gameInfo = {
+                        logo: "images/apexlegends.jpg",
+                        title: "Apex Legends No Recoil Cheat",
+                        description: "",
+                        price: "€14.00"
+                    };
+                    break;
+
+
+                default:
+                    console.error("No game selected or game does not exist.");
+            }
+
+            // Werk de pagina bij met de gegevens van de geselecteerde game
+            if (gameInfo.logo) {
+                document.getElementById("gameLogo").src = gameInfo.logo;
+                document.getElementById("gameTitle").textContent = gameInfo.title;
+                document.getElementById("gameDescription").textContent = gameInfo.description;
+                document.getElementById("gamePrice").textContent = "Price: " + gameInfo.price;
+            }
+        }
+
+        // Haal de gameparameter uit de URL en werk de checkout bij
+        const selectedGame = getQueryParam('game');
+        if (selectedGame) {
+            updateCheckout(selectedGame);
+        } else {
+            console.error("Game parameter not found.");
+        }
+    </script>
+</body>
+</html>
